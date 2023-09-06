@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kgothatso Moiloa</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="nav-bar">
+        <a href="#">About me</a>
+        <a href="#">Work</a>
+        <a href="#">Contact</a>
+        
+    </div>
+
+
+    <div class="header">      
+            <div class="welcome_message">
+                <h1>Hey I am Kgothatso Moiloa</h1>
+                <h2>A web developer</h2>
+            </div>
+    
+    </div>
+
+
+    <div class="row">
+        <div class="column1">
+
+       
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="https://scontent.fcpt2-1.fna.fbcdn.net/v/t39.30808-6/369636061_314520771113439_4207303788336393545_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeF1uRrziDH3y0XkBqcoMNDezKcQ4yFIRQ7MpxDjIUhFDqXptq8jICs7o4h1sKtuTi8NJGBedZrHBfSxJDuixdQx&_nc_ohc=pKc_h0wn2yQAX-0YvWl&_nc_zt=23&_nc_ht=scontent.fcpt2-1.fna&oh=00_AfCcaD5Zkc7laSv0r9hVadh_Jl_23OEFXWd2wC0U5icMUg&oe=64FB95BD">
+              <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="https://scontent.fcpt2-1.fna.fbcdn.net/v/t39.30808-6/345027823_263959642772185_6376194570128043420_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1b51e3&_nc_eui2=AeF3x7XOZ0uVADDYlz4MTRS16vS3GKbgzA7q9LcYpuDMDpuyV2pvgo94v2tL7u4WwusOCUK7qwYqOUSfHLMDy-Vi&_nc_ohc=eYAjQoKmsjYAX-qRmbd&_nc_zt=23&_nc_ht=scontent.fcpt2-1.fna&oh=00_AfCAx90MGfldVyH4YGZQg8N7TNbkUom4ywOyyIX7WfdR-Q&oe=64FCB558">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="https://scontent.fcpt2-1.fna.fbcdn.net/v/t39.30808-6/351526575_280344551197728_631142600370353708_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeGWy_pYvhmUqE-JwQ_vLf9oC42wkJEXatkLjbCQkRdq2efQE4M8j8aqOFR3gD3pD1w3GrQoU8mEakHAGjYdDs6D&_nc_ohc=fc2eN0nzZdIAX-J5JNW&_nc_zt=23&_nc_ht=scontent.fcpt2-1.fna&oh=00_AfCjwqSLqo2qf3Z4eAs6G-4-55ExfBam_ws190tsizVmug&oe=64FC8508">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+        </div>
+
+        <div class="column2">
+
+            <div class="notice">This is my personal website!</div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div>
+            <h5>These are some of my projects</h5>
+
+           
+        </div>
+           
+    </div>
+  </body>
+</html>
+
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
